@@ -82,6 +82,7 @@ export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort
                     {title}
                   </a>
                 </h3>
+                {page.description && <p class="desc-text">{page.description}</p>}
               </div>
               <ul class="tags">
                 {tags.map((tag) => (
