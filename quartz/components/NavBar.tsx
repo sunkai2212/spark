@@ -27,8 +27,6 @@ export default (() => {
             </svg>
           </a>
           <a href={`${baseDir}/ideas`}>创意</a>
-          <a href={`${baseDir}/tags`}>标签</a>
-          <a href={`${baseDir}/about`}>关于</a>
         </div>
       </nav>
     )
