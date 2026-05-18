@@ -265,11 +265,15 @@ function main() {
     days,
   };
 
-  // 写文件
+  // 写 JSON
   const outDir = path.join(DESKTOP, "创意站/content/learning");
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
-  const outPath = path.join(outDir, "timeline-data.json");
-  fs.writeFileSync(outPath, JSON.stringify(output, null, 2), "utf8");
+  const jsonPath = path.join(outDir, "timeline-data.json");
+  fs.writeFileSync(jsonPath, JSON.stringify(output, null, 2), "utf8");
+
+  // 同时写 JS 版本（script 标签直接加载，不走 fetch，更可靠）
+  const jsPath = path.join(outDir, "timeline-data.js");
+  fs.writeFileSync(jsPath, "window.TIMELINE_DATA=" + JSON.stringify(output) + ";", "utf8");
 
   // 打印摘要
   console.log(`\n======== 扫描完成 ========`);
@@ -283,7 +287,8 @@ function main() {
     }
     if (day.memoryRefs) console.log(`  🧠 笔记: ${day.memoryRefs}`);
   }
-  console.log(`\n输出: ${outPath}`);
+  console.log(`\n输出: ${jsonPath}`);
+  console.log(`JS:   ${jsPath}`);
 }
 
 main();

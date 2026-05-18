@@ -263,13 +263,24 @@ body[data-mode="dark"] .mini-tag:hover {
 }
 </style>
 
-<div id="learning-root">
-  <div id="loading-msg" class="timeline-loading">加载中…</div>
-</div>
+<div id="learning-root"></div>
 
+<script src="./timeline-data.js"></script>
 <script>
 (function() {
   var container = document.getElementById("learning-root");
+
+  // 数据未就绪（JS 文件不存在或加载失败）
+  if (!window.TIMELINE_DATA) {
+    container.innerHTML =
+      '<div class="timeline-error">' +
+      '<p>数据未生成。请运行扫描脚本：</p>' +
+      '<p><code>node scripts/scan-learning.cjs</code></p>' +
+      '</div>';
+    return;
+  }
+
+  var data = window.TIMELINE_DATA;
 
   function el(tag, cls, html) {
     var e = document.createElement(tag);
@@ -347,7 +358,6 @@ body[data-mode="dark"] .mini-tag:hover {
     var card = el("div", "project-card");
 
     card.appendChild(el("div", "project-title", p.title));
-
     card.appendChild(el("div", "project-desc", p.description));
 
     if (p.skills.length) {
@@ -355,33 +365,15 @@ body[data-mode="dark"] .mini-tag:hover {
     }
 
     if (p.highlights.length) {
-      var hl = el("ul", "project-highlights", highlightsHtml);
-      card.appendChild(hl);
+      card.appendChild(el("ul", "project-highlights", highlightsHtml));
     }
 
     return card;
   }
 
-  // ===== 加载数据并渲染 =====
-  fetch("./timeline-data.json")
-    .then(function(res) {
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      return res.json();
-    })
-    .then(function(data) {
-      container.innerHTML = "";
-
-      container.appendChild(renderStats(data.summary));
-      container.appendChild(renderSkills(data.summary.skills));
-      container.appendChild(renderTimeline(data.days));
-    })
-    .catch(function(err) {
-      container.innerHTML =
-        '<div class="timeline-error">' +
-        '<p>数据加载失败。请先运行扫描脚本生成数据：</p>' +
-        '<p><code>node scripts/scan-learning.cjs</code></p>' +
-        '<p style="margin-top:0.5rem;font-size:0.8125rem">' + err.message + '</p>' +
-        '</div>';
-    });
+  // ===== 渲染 =====
+  container.appendChild(renderStats(data.summary));
+  container.appendChild(renderSkills(data.summary.skills));
+  container.appendChild(renderTimeline(data.days));
 })();
 </script>
