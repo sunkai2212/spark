@@ -265,14 +265,9 @@ function main() {
     days,
   };
 
-  // 写 JSON
-  const outDir = path.join(DESKTOP, "创意站/content/learning");
-  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
-  const jsonPath = path.join(outDir, "timeline-data.json");
-  fs.writeFileSync(jsonPath, JSON.stringify(output, null, 2), "utf8");
-
-  // 同时写 JS 版本（script 标签直接加载，不走 fetch，更可靠）
-  const jsPath = path.join(outDir, "timeline-data.js");
+  // 写 JS 到 quartz/static/（页面通过 <script src="../static/..."> 加载）
+  const staticDir = path.join(DESKTOP, "创意站/quartz/static");
+  const jsPath = path.join(staticDir, "timeline-data.js");
   fs.writeFileSync(jsPath, "window.TIMELINE_DATA=" + JSON.stringify(output) + ";", "utf8");
 
   // 打印摘要
@@ -287,8 +282,7 @@ function main() {
     }
     if (day.memoryRefs) console.log(`  🧠 笔记: ${day.memoryRefs}`);
   }
-  console.log(`\n输出: ${jsonPath}`);
-  console.log(`JS:   ${jsPath}`);
+  console.log(`\n输出: ${jsPath}`);
 }
 
 main();

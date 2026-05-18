@@ -265,7 +265,7 @@ body[data-mode="dark"] .mini-tag:hover {
 
 <div id="learning-root"></div>
 
-<script src="./timeline-data.js"></script>
+<script src="../static/timeline-data.js"></script>
 <script>
 (function() {
   var container = document.getElementById("learning-root");
