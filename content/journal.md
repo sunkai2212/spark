@@ -263,7 +263,192 @@ body[data-mode="dark"] .mini-tag:hover {
 }
 </style>
 
-<div id="learning-root"></div>
+<div id="learning-root">
 
-<script src="../static/timeline-data.js"></script>
-<script src="../static/learning-timeline.js"></script>
+<!-- TIMELINE_START -->
+<div class="stats-bar">
+  <div class="stat-card"><span class="stat-number">3</span><span class="stat-label">学习天数</span></div>
+  <div class="stat-card"><span class="stat-number">7</span><span class="stat-label">完成项目</span></div>
+  <div class="stat-card"><span class="stat-number">23</span><span class="stat-label">掌握技能</span></div>
+</div>
+
+<div class="skills-cloud">
+  <span class="skill-tag">动画</span>
+  <span class="skill-tag">品牌设计</span>
+  <span class="skill-tag">设计</span>
+  <span class="skill-tag">数据分析</span>
+  <span class="skill-tag">Axios</span>
+  <span class="skill-tag">Canvas</span>
+  <span class="skill-tag">Cheerio</span>
+  <span class="skill-tag">CSS</span>
+  <span class="skill-tag">D3.js</span>
+  <span class="skill-tag">ECharts</span>
+  <span class="skill-tag">GitHub Pages</span>
+  <span class="skill-tag">HTML</span>
+  <span class="skill-tag">HTTP</span>
+  <span class="skill-tag">JavaScript</span>
+  <span class="skill-tag">Node.js</span>
+  <span class="skill-tag">pptxgenjs</span>
+  <span class="skill-tag">Quartz</span>
+  <span class="skill-tag">React</span>
+  <span class="skill-tag">Remotion</span>
+  <span class="skill-tag">SCSS</span>
+  <span class="skill-tag">Sharp</span>
+  <span class="skill-tag">SVG</span>
+  <span class="skill-tag">TypeScript</span>
+</div>
+
+<div class="timeline">
+  <div class="day-group">
+    <div class="day-marker"></div>
+    <div class="day-header">
+      <div class="day-date">2026-05-16</div>
+      <div class="day-label">Day 1 · 5月16日</div>
+    </div>
+    <div class="day-note">第一天：初次接触 Claude Code，从交互式可视化入手，感受 AI 编程的节奏。</div>
+    <div class="project-list">
+      <div class="project-card">
+        <div class="project-title">红酒品鉴轮盘</div>
+        <div class="project-desc">D3.js 交互式葡萄酒风味轮盘</div>
+        <div class="project-skills">
+          <span class="mini-tag">D3.js</span>
+          <span class="mini-tag">SVG</span>
+          <span class="mini-tag">CSS</span>
+          <span class="mini-tag">JavaScript</span>
+        </div>
+        <ul class="project-highlights">
+          <li>首个 Claude Code 完整项目</li>
+          <li>交互式数据可视化</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <div class="project-title">股票可视化看板</div>
+        <div class="project-desc">ECharts 驱动的股票数据仪表盘</div>
+        <div class="project-skills">
+          <span class="mini-tag">ECharts</span>
+          <span class="mini-tag">CSS</span>
+          <span class="mini-tag">JavaScript</span>
+        </div>
+        <ul class="project-highlights">
+          <li>多图表联动</li>
+          <li>响应式布局</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <div class="project-title">个人 IP 品牌创作</div>
+        <div class="project-desc">品牌视觉探索：海报、Pitch Deck、形象生成</div>
+        <div class="project-skills">
+          <span class="mini-tag">HTML</span>
+          <span class="mini-tag">CSS</span>
+          <span class="mini-tag">Canvas</span>
+          <span class="mini-tag">Sharp</span>
+          <span class="mini-tag">品牌设计</span>
+        </div>
+        <ul class="project-highlights">
+          <li>AI 辅助品牌视觉设计</li>
+          <li>多版式海报生成</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="day-group">
+    <div class="day-marker"></div>
+    <div class="day-header">
+      <div class="day-date">2026-05-17</div>
+      <div class="day-label">Day 2 · 5月17日</div>
+    </div>
+    <div class="day-note">第二天：密度升级 — 品牌设计、爬虫实战、游戏数据报告，工具链快速拓宽。</div>
+    <div class="project-list">
+      <div class="project-card">
+        <div class="project-title">个人 IP 品牌创作</div>
+        <div class="project-desc">品牌视觉探索：海报、Pitch Deck、形象生成</div>
+        <div class="project-skills">
+          <span class="mini-tag">HTML</span>
+          <span class="mini-tag">CSS</span>
+          <span class="mini-tag">Canvas</span>
+          <span class="mini-tag">Sharp</span>
+          <span class="mini-tag">品牌设计</span>
+        </div>
+        <ul class="project-highlights">
+          <li>AI 辅助品牌视觉设计</li>
+          <li>多版式海报生成</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <div class="project-title">网页爬虫实践</div>
+        <div class="project-desc">Node.js 爬虫：新闻抓取 + Bilibili 热榜</div>
+        <div class="project-skills">
+          <span class="mini-tag">Node.js</span>
+          <span class="mini-tag">Axios</span>
+          <span class="mini-tag">Cheerio</span>
+          <span class="mini-tag">HTTP</span>
+        </div>
+        <ul class="project-highlights">
+          <li>掌握 HTTP 请求与 DOM 解析</li>
+          <li>真实数据抓取实践</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <div class="project-title">金铲铲 17.3 环境报告</div>
+        <div class="project-desc">游戏数据抓取 → 可视化报告 → PPT 自动生成</div>
+        <div class="project-skills">
+          <span class="mini-tag">Node.js</span>
+          <span class="mini-tag">HTML</span>
+          <span class="mini-tag">Canvas</span>
+          <span class="mini-tag">pptxgenjs</span>
+          <span class="mini-tag">数据分析</span>
+        </div>
+        <ul class="project-highlights">
+          <li>端到端数据报告流水线</li>
+          <li>23MB PPT 自动输出</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="day-group">
+    <div class="day-marker"></div>
+    <div class="day-header">
+      <div class="day-date">2026-05-18</div>
+      <div class="day-label">Day 3 · 5月18日</div>
+    </div>
+    <div class="day-note">第三天：冲顶 — Remotion 视频编程 + Quartz 数字花园搭建，从代码到底层框架。</div>
+    <div class="project-list">
+      <div class="project-card">
+        <div class="project-title">Remotion 游戏 PV 动效</div>
+        <div class="project-desc">React 驱动的视频渲染引擎，5 场景动画</div>
+        <div class="project-skills">
+          <span class="mini-tag">React</span>
+          <span class="mini-tag">Remotion</span>
+          <span class="mini-tag">TypeScript</span>
+          <span class="mini-tag">Canvas</span>
+          <span class="mini-tag">动画</span>
+        </div>
+        <ul class="project-highlights">
+          <li>视频编程入门</li>
+          <li>组件化动画系统</li>
+          <li>踩坑：深色背景渲染</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <div class="project-title">火花 · 创意数字花园</div>
+        <div class="project-desc">Quartz v4.5.2 个人知识库，Apple 风格主题</div>
+        <div class="project-skills">
+          <span class="mini-tag">Quartz</span>
+          <span class="mini-tag">TypeScript</span>
+          <span class="mini-tag">SCSS</span>
+          <span class="mini-tag">GitHub Pages</span>
+          <span class="mini-tag">设计</span>
+        </div>
+        <ul class="project-highlights">
+          <li>个人创意站从零搭建</li>
+          <li>Apple 风格 UI 定制</li>
+          <li>CI/CD 自动部署</li>
+        </ul>
+      </div>
+    </div>
+    <div class="memory-refs">🧠 经验笔记：call-superpowers-first、remotion-common-mistakes、spark-project-context</div>
+  </div>
+</div>
+<!-- TIMELINE_END -->
+
+</div>

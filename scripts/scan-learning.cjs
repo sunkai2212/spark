@@ -161,6 +161,98 @@ function readClaudeMemories() {
 
 // ===== 主逻辑 =====
 
+/** 生成静态 HTML 时间线 */
+function generateStaticHtml(data) {
+  const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+  let html = "";
+
+  // Stats bar
+  html += '<div class="stats-bar">\n';
+  html += '  <div class="stat-card"><span class="stat-number">' + data.summary.totalDays + '</span><span class="stat-label">学习天数</span></div>\n';
+  html += '  <div class="stat-card"><span class="stat-number">' + data.summary.totalProjects + '</span><span class="stat-label">完成项目</span></div>\n';
+  html += '  <div class="stat-card"><span class="stat-number">' + data.summary.skills.length + '</span><span class="stat-label">掌握技能</span></div>\n';
+  html += '</div>\n\n';
+
+  // Skills cloud
+  html += '<div class="skills-cloud">\n';
+  for (const s of data.summary.skills) {
+    html += '  <span class="skill-tag">' + esc(s) + '</span>\n';
+  }
+  html += '</div>\n\n';
+
+  // Timeline
+  html += '<div class="timeline">\n';
+  for (const day of data.days) {
+    html += '  <div class="day-group">\n';
+    html += '    <div class="day-marker"></div>\n';
+    html += '    <div class="day-header">\n';
+    html += '      <div class="day-date">' + esc(day.date) + '</div>\n';
+    html += '      <div class="day-label">' + esc(day.label) + '</div>\n';
+    html += '    </div>\n';
+    if (day.note) {
+      html += '    <div class="day-note">' + esc(day.note) + '</div>\n';
+    }
+    html += '    <div class="project-list">\n';
+    for (const p of day.projects) {
+      html += '      <div class="project-card">\n';
+      html += '        <div class="project-title">' + esc(p.title) + '</div>\n';
+      html += '        <div class="project-desc">' + esc(p.description) + '</div>\n';
+      if (p.skills.length) {
+        html += '        <div class="project-skills">\n';
+        for (const s of p.skills) {
+          html += '          <span class="mini-tag">' + esc(s) + '</span>\n';
+        }
+        html += '        </div>\n';
+      }
+      if (p.highlights.length) {
+        html += '        <ul class="project-highlights">\n';
+        for (const h of p.highlights) {
+          html += '          <li>' + esc(h) + '</li>\n';
+        }
+        html += '        </ul>\n';
+      }
+      html += '      </div>\n';
+    }
+    html += '    </div>\n';
+    if (day.memoryRefs) {
+      html += '    <div class="memory-refs">🧠 经验笔记：' + esc(day.memoryRefs) + '</div>\n';
+    }
+    html += '  </div>\n';
+  }
+  html += '</div>';
+
+  return html;
+}
+
+/** 将静态 HTML 写入 journal.md 的标记之间 */
+function updateJournalMd(filePath, html) {
+  const markerStart = "<!-- TIMELINE_START -->";
+  const markerEnd = "<!-- TIMELINE_END -->";
+
+  let content;
+  try {
+    content = fs.readFileSync(filePath, "utf8");
+  } catch {
+    console.error("无法读取 " + filePath);
+    return;
+  }
+
+  const startIdx = content.indexOf(markerStart);
+  const endIdx = content.indexOf(markerEnd);
+
+  if (startIdx === -1 || endIdx === -1) {
+    console.error("journal.md 中未找到 TIMELINE_START / TIMELINE_END 标记");
+    return;
+  }
+
+  const before = content.slice(0, startIdx + markerStart.length);
+  const after = content.slice(endIdx);
+  const newContent = before + "\n" + html + "\n" + after;
+  fs.writeFileSync(filePath, newContent, "utf8");
+  console.log("已更新 journal.md 时间线内容");
+}
+
 function main() {
   // allDates 收集所有 "项目在某天有活动" 的证据
   // 结构: { project, date (Date 对象), mtimeMs (用于排序) }
@@ -269,6 +361,11 @@ function main() {
   const staticDir = path.join(DESKTOP, "创意站/quartz/static");
   const jsPath = path.join(staticDir, "timeline-data.js");
   fs.writeFileSync(jsPath, "window.TIMELINE_DATA=" + JSON.stringify(output) + ";", "utf8");
+
+  // 生成静态 HTML 并写入 journal.md
+  const staticHtml = generateStaticHtml(output);
+  const journalPath = path.join(DESKTOP, "创意站/content/journal.md");
+  updateJournalMd(journalPath, staticHtml);
 
   // 打印摘要
   console.log(`\n======== 扫描完成 ========`);
