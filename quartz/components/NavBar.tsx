@@ -3,7 +3,7 @@ import { pathToRoot } from "../util/path"
 import { classNames } from "../util/lang"
 
 export default (() => {
-  const NavBar: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComponentProps) => {
+  const NavBar: QuartzComponent = ({ fileData, cfg: _cfg, displayClass }: QuartzComponentProps) => {
     const baseDir = pathToRoot(fileData.slug!)
     return (
       <nav class={classNames(displayClass, "navbar")}>
