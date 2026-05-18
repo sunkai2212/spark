@@ -71,8 +71,8 @@ export default {
       home: "返回首页",
     },
     folderContent: {
-      folder: "文件夹",
-      itemsUnderFolder: ({ count }) => `此文件夹下有${count}条笔记。`,
+      folder: "",
+      itemsUnderFolder: ({ count }) => `${count} 个创意`,
     },
     tagContent: {
       tag: "标签",
