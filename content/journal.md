@@ -268,15 +268,17 @@ body[data-mode="dark"] .mini-tag:hover {
 <!-- TIMELINE_START -->
 <div class="stats-bar">
   <div class="stat-card"><span class="stat-number">4</span><span class="stat-label">学习天数</span></div>
-  <div class="stat-card"><span class="stat-number">7</span><span class="stat-label">完成项目</span></div>
-  <div class="stat-card"><span class="stat-number">23</span><span class="stat-label">掌握技能</span></div>
+  <div class="stat-card"><span class="stat-number">8</span><span class="stat-label">完成项目</span></div>
+  <div class="stat-card"><span class="stat-number">26</span><span class="stat-label">掌握技能</span></div>
 </div>
 
 <div class="skills-cloud">
   <span class="skill-tag">动画</span>
+  <span class="skill-tag">方法论</span>
   <span class="skill-tag">品牌设计</span>
   <span class="skill-tag">设计</span>
   <span class="skill-tag">数据分析</span>
+  <span class="skill-tag">Agent Skills</span>
   <span class="skill-tag">Axios</span>
   <span class="skill-tag">Canvas</span>
   <span class="skill-tag">Cheerio</span>
@@ -287,6 +289,7 @@ body[data-mode="dark"] .mini-tag:hover {
   <span class="skill-tag">HTML</span>
   <span class="skill-tag">HTTP</span>
   <span class="skill-tag">JavaScript</span>
+  <span class="skill-tag">Markdown</span>
   <span class="skill-tag">Node.js</span>
   <span class="skill-tag">pptxgenjs</span>
   <span class="skill-tag">Quartz</span>
@@ -454,7 +457,7 @@ body[data-mode="dark"] .mini-tag:hover {
       <div class="day-date">2026-05-19</div>
       <div class="day-label">Day 4 · 5月19日</div>
     </div>
-    <div class="day-note">第四天：沉淀 — 建立学习时间线、踩坑 Quartz 渲染机制、用 neat-freak 整理全项目知识体系。</div>
+    <div class="day-note">第四天：沉淀 — 建立学习时间线可视化、踩坑 Quartz 渲染机制、搭建首个 Agent Skill（Arsenal Builder）、neat-freak 全项目知识体系整理。</div>
     <div class="project-list">
       <div class="project-card">
         <div class="project-title">火花 · 创意数字花园</div>
@@ -470,6 +473,19 @@ body[data-mode="dark"] .mini-tag:hover {
           <li>个人创意站从零搭建</li>
           <li>Apple 风格 UI 定制</li>
           <li>CI/CD 自动部署</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Arsenal Builder 方法论</div>
+        <div class="project-desc">跨领域知识积累 Agent Skill，移植 aiHot 原则为通用方法论</div>
+        <div class="project-skills">
+          <span class="mini-tag">Agent Skills</span>
+          <span class="mini-tag">Markdown</span>
+          <span class="mini-tag">方法论</span>
+        </div>
+        <ul class="project-highlights">
+          <li>首个自建 Agent Skill</li>
+          <li>SKILL.md + 交接文档 + 记忆体系</li>
         </ul>
       </div>
     </div>

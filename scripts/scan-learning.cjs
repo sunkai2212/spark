@@ -77,6 +77,13 @@ const PROJECT_META = {
     highlights: ["个人创意站从零搭建", "Apple 风格 UI 定制", "CI/CD 自动部署"],
     dir: path.join(DESKTOP, "创意站"),
   },
+  hot: {
+    title: "Arsenal Builder 方法论",
+    description: "跨领域知识积累 Agent Skill，移植 aiHot 原则为通用方法论",
+    skills: ["Agent Skills", "Markdown", "方法论"],
+    highlights: ["首个自建 Agent Skill", "SKILL.md + 交接文档 + 记忆体系"],
+    dir: path.join(DESKTOP, "hot"),
+  },
 };
 
 // ===== 工具函数 =====
@@ -301,7 +308,7 @@ function main() {
     "2026-05-16": "第一天：初次接触 Claude Code，从交互式可视化入手，感受 AI 编程的节奏。",
     "2026-05-17": "第二天：密度升级 — 品牌设计、爬虫实战、游戏数据报告，工具链快速拓宽。",
     "2026-05-18": "第三天：冲顶 — Remotion 视频编程 + Quartz 数字花园搭建，从代码到底层框架。",
-    "2026-05-19": "第四天：沉淀 — 建立学习时间线、踩坑 Quartz 渲染机制、用 neat-freak 整理全项目知识体系。",
+    "2026-05-19": "第四天：沉淀 — 建立学习时间线可视化、踩坑 Quartz 渲染机制、搭建首个 Agent Skill（Arsenal Builder）、neat-freak 全项目知识体系整理。",
   };
 
   const firstDate = new Date(sortedDays[0]);
