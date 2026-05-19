@@ -1,6 +1,6 @@
 ---
 title: "学习历程"
-description: "Claude Code 学习时间线 · 3 天 7 个项目的成长轨迹"
+description: "Claude Code 学习时间线 · 4 天 7 个项目的成长轨迹"
 created: 2026-05-18
 tags:
   - 学习
