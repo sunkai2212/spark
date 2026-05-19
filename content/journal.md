@@ -267,7 +267,7 @@ body[data-mode="dark"] .mini-tag:hover {
 
 <!-- TIMELINE_START -->
 <div class="stats-bar">
-  <div class="stat-card"><span class="stat-number">3</span><span class="stat-label">学习天数</span></div>
+  <div class="stat-card"><span class="stat-number">4</span><span class="stat-label">学习天数</span></div>
   <div class="stat-card"><span class="stat-number">7</span><span class="stat-label">完成项目</span></div>
   <div class="stat-card"><span class="stat-number">23</span><span class="stat-label">掌握技能</span></div>
 </div>
@@ -446,7 +446,34 @@ body[data-mode="dark"] .mini-tag:hover {
         </ul>
       </div>
     </div>
-    <div class="memory-refs">🧠 经验笔记：call-superpowers-first、remotion-common-mistakes、spark-project-context</div>
+    <div class="memory-refs">🧠 经验笔记：call-superpowers-first、remotion-common-mistakes、spark-project-context、github-pages-no-chinese-filenames、quartz-folderpage-override、quartz-static-html-pattern</div>
+  </div>
+  <div class="day-group">
+    <div class="day-marker"></div>
+    <div class="day-header">
+      <div class="day-date">2026-05-19</div>
+      <div class="day-label">Day 4 · 5月19日</div>
+    </div>
+    <div class="day-note">第四天：沉淀 — 建立学习时间线、踩坑 Quartz 渲染机制、用 neat-freak 整理全项目知识体系。</div>
+    <div class="project-list">
+      <div class="project-card">
+        <div class="project-title">火花 · 创意数字花园</div>
+        <div class="project-desc">Quartz v4.5.2 个人知识库，Apple 风格主题</div>
+        <div class="project-skills">
+          <span class="mini-tag">Quartz</span>
+          <span class="mini-tag">TypeScript</span>
+          <span class="mini-tag">SCSS</span>
+          <span class="mini-tag">GitHub Pages</span>
+          <span class="mini-tag">设计</span>
+        </div>
+        <ul class="project-highlights">
+          <li>个人创意站从零搭建</li>
+          <li>Apple 风格 UI 定制</li>
+          <li>CI/CD 自动部署</li>
+        </ul>
+      </div>
+    </div>
+    <div class="memory-refs">🧠 经验笔记：feedback-methodology-over-product、project-arsenal-builder、reference-aihot-and-khazix、user-sunka-profile</div>
   </div>
 </div>
 <!-- TIMELINE_END -->
