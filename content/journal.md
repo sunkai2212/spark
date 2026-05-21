@@ -1,6 +1,6 @@
 ---
 title: "学习历程"
-description: "Claude Code 学习时间线 · 4 天 7 个项目的成长轨迹"
+description: "Claude Code 学习时间线 · 5 天 9 个项目的成长轨迹"
 created: 2026-05-18
 tags:
   - 学习
@@ -267,9 +267,9 @@ body[data-mode="dark"] .mini-tag:hover {
 
 <!-- TIMELINE_START -->
 <div class="stats-bar">
-  <div class="stat-card"><span class="stat-number">4</span><span class="stat-label">学习天数</span></div>
-  <div class="stat-card"><span class="stat-number">8</span><span class="stat-label">完成项目</span></div>
-  <div class="stat-card"><span class="stat-number">26</span><span class="stat-label">掌握技能</span></div>
+  <div class="stat-card"><span class="stat-number">5</span><span class="stat-label">学习天数</span></div>
+  <div class="stat-card"><span class="stat-number">9</span><span class="stat-label">完成项目</span></div>
+  <div class="stat-card"><span class="stat-number">31</span><span class="stat-label">掌握技能</span></div>
 </div>
 
 <div class="skills-cloud">
@@ -288,17 +288,22 @@ body[data-mode="dark"] .mini-tag:hover {
   <span class="skill-tag">GitHub Pages</span>
   <span class="skill-tag">HTML</span>
   <span class="skill-tag">HTTP</span>
+  <span class="skill-tag">IndexedDB</span>
   <span class="skill-tag">JavaScript</span>
   <span class="skill-tag">Markdown</span>
   <span class="skill-tag">Node.js</span>
   <span class="skill-tag">pptxgenjs</span>
+  <span class="skill-tag">PWA</span>
   <span class="skill-tag">Quartz</span>
   <span class="skill-tag">React</span>
   <span class="skill-tag">Remotion</span>
   <span class="skill-tag">SCSS</span>
   <span class="skill-tag">Sharp</span>
   <span class="skill-tag">SVG</span>
+  <span class="skill-tag">Tailwind CSS</span>
   <span class="skill-tag">TypeScript</span>
+  <span class="skill-tag">Vite</span>
+  <span class="skill-tag">Web Audio API</span>
 </div>
 
 <div class="timeline">
@@ -490,6 +495,35 @@ body[data-mode="dark"] .mini-tag:hover {
       </div>
     </div>
     <div class="memory-refs">🧠 经验笔记：feedback-methodology-over-product、project-arsenal-builder、reference-aihot-and-khazix、user-sunka-profile</div>
+  </div>
+  <div class="day-group">
+    <div class="day-marker"></div>
+    <div class="day-header">
+      <div class="day-date">2026-05-20</div>
+      <div class="day-label">Day 5 · 5月20日</div>
+    </div>
+    <div class="day-note">第五天：方向调整 — 从方法论回到产品，启动微醺 PWA 语音日记；同时深入 Claude Code Hooks 底层机制，理解工具链架构。</div>
+    <div class="project-list">
+      <div class="project-card">
+        <div class="project-title">微醺 · 说给夜晚</div>
+        <div class="project-desc">React PWA 语音记录应用，暗暖色调、情绪追踪、IndexedDB 本地存储</div>
+        <div class="project-skills">
+          <span class="mini-tag">React</span>
+          <span class="mini-tag">TypeScript</span>
+          <span class="mini-tag">Tailwind CSS</span>
+          <span class="mini-tag">Vite</span>
+          <span class="mini-tag">IndexedDB</span>
+          <span class="mini-tag">PWA</span>
+          <span class="mini-tag">Web Audio API</span>
+        </div>
+        <ul class="project-highlights">
+          <li>Phase 1 完整 MVP</li>
+          <li>PWA 离线可用</li>
+          <li>音频录制 + 波形可视化</li>
+          <li>8 种情绪 + 7 种酒类追踪</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 <!-- TIMELINE_END -->

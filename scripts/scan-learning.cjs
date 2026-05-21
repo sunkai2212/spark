@@ -84,6 +84,13 @@ const PROJECT_META = {
     highlights: ["首个自建 Agent Skill", "SKILL.md + 交接文档 + 记忆体系"],
     dir: path.join(DESKTOP, "hot"),
   },
+  微醺: {
+    title: "微醺 · 说给夜晚",
+    description: "React PWA 语音记录应用，暗暖色调、情绪追踪、IndexedDB 本地存储",
+    skills: ["React", "TypeScript", "Tailwind CSS", "Vite", "IndexedDB", "PWA", "Web Audio API"],
+    highlights: ["Phase 1 完整 MVP", "PWA 离线可用", "音频录制 + 波形可视化", "8 种情绪 + 7 种酒类追踪"],
+    dir: path.join(DESKTOP, "微醺"),
+  },
 };
 
 // ===== 工具函数 =====
@@ -233,7 +240,7 @@ function generateStaticHtml(data) {
 }
 
 /** 将静态 HTML 写入 journal.md 的标记之间 */
-function updateJournalMd(filePath, html) {
+function updateJournalMd(filePath, html, summary) {
   const markerStart = "<!-- TIMELINE_START -->";
   const markerEnd = "<!-- TIMELINE_END -->";
 
@@ -256,7 +263,13 @@ function updateJournalMd(filePath, html) {
   const before = content.slice(0, startIdx + markerStart.length);
   const after = content.slice(endIdx);
   const newContent = before + "\n" + html + "\n" + after;
-  fs.writeFileSync(filePath, newContent, "utf8");
+
+  // 自动更新 frontmatter description 中的天数/项目数
+  const descRegex = /description:\s*"Claude Code 学习时间线 · \d+ 天 \d+ 个项目的成长轨迹"/;
+  const newDesc = 'description: "Claude Code 学习时间线 · ' + summary.totalDays + ' 天 ' + summary.totalProjects + ' 个项目的成长轨迹"';
+  const result = newContent.replace(descRegex, newDesc);
+
+  fs.writeFileSync(filePath, result, "utf8");
   console.log("已更新 journal.md 时间线内容");
 }
 
@@ -309,6 +322,7 @@ function main() {
     "2026-05-17": "第二天：密度升级 — 品牌设计、爬虫实战、游戏数据报告，工具链快速拓宽。",
     "2026-05-18": "第三天：冲顶 — Remotion 视频编程 + Quartz 数字花园搭建，从代码到底层框架。",
     "2026-05-19": "第四天：沉淀 — 建立学习时间线可视化、踩坑 Quartz 渲染机制、搭建首个 Agent Skill（Arsenal Builder）、neat-freak 全项目知识体系整理。",
+    "2026-05-20": "第五天：方向调整 — 从方法论回到产品，启动微醺 PWA 语音日记；同时深入 Claude Code Hooks 底层机制，理解工具链架构。",
   };
 
   const firstDate = new Date(sortedDays[0]);
@@ -373,7 +387,7 @@ function main() {
   // 生成静态 HTML 并写入 journal.md
   const staticHtml = generateStaticHtml(output);
   const journalPath = path.join(DESKTOP, "创意站/content/journal.md");
-  updateJournalMd(journalPath, staticHtml);
+  updateJournalMd(journalPath, staticHtml, output.summary);
 
   // 打印摘要
   console.log(`\n======== 扫描完成 ========`);
