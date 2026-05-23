@@ -1,6 +1,6 @@
 ---
 title: "学习历程"
-description: "Claude Code 学习时间线 · 5 天 9 个项目的成长轨迹"
+description: "Claude Code 学习时间线 · 7 天 10 个项目的成长轨迹"
 created: 2026-05-18
 tags:
   - 学习
@@ -267,9 +267,9 @@ body[data-mode="dark"] .mini-tag:hover {
 
 <!-- TIMELINE_START -->
 <div class="stats-bar">
-  <div class="stat-card"><span class="stat-number">5</span><span class="stat-label">学习天数</span></div>
-  <div class="stat-card"><span class="stat-number">9</span><span class="stat-label">完成项目</span></div>
-  <div class="stat-card"><span class="stat-number">31</span><span class="stat-label">掌握技能</span></div>
+  <div class="stat-card"><span class="stat-number">7</span><span class="stat-label">学习天数</span></div>
+  <div class="stat-card"><span class="stat-number">10</span><span class="stat-label">完成项目</span></div>
+  <div class="stat-card"><span class="stat-number">32</span><span class="stat-label">掌握技能</span></div>
 </div>
 
 <div class="skills-cloud">
@@ -302,6 +302,7 @@ body[data-mode="dark"] .mini-tag:hover {
   <span class="skill-tag">SVG</span>
   <span class="skill-tag">Tailwind CSS</span>
   <span class="skill-tag">TypeScript</span>
+  <span class="skill-tag">UX设计</span>
   <span class="skill-tag">Vite</span>
   <span class="skill-tag">Web Audio API</span>
 </div>
@@ -521,6 +522,60 @@ body[data-mode="dark"] .mini-tag:hover {
           <li>PWA 离线可用</li>
           <li>音频录制 + 波形可视化</li>
           <li>8 种情绪 + 7 种酒类追踪</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="day-group">
+    <div class="day-marker"></div>
+    <div class="day-header">
+      <div class="day-date">2026-05-21</div>
+      <div class="day-label">Day 6 · 5月21日</div>
+    </div>
+    <div class="day-note">第六天：巩固与延伸 — 创意站持续打磨（微醺卡片上线）、Claude Code 上下文机制踩坑与恢复；在稳定中建立工作流信心。</div>
+    <div class="project-list">
+      <div class="project-card">
+        <div class="project-title">火花 · 创意数字花园</div>
+        <div class="project-desc">Quartz v4.5.2 个人知识库，Apple 风格主题</div>
+        <div class="project-skills">
+          <span class="mini-tag">Quartz</span>
+          <span class="mini-tag">TypeScript</span>
+          <span class="mini-tag">SCSS</span>
+          <span class="mini-tag">GitHub Pages</span>
+          <span class="mini-tag">设计</span>
+        </div>
+        <ul class="project-highlights">
+          <li>个人创意站从零搭建</li>
+          <li>Apple 风格 UI 定制</li>
+          <li>CI/CD 自动部署</li>
+        </ul>
+      </div>
+    </div>
+    <div class="memory-refs">🧠 经验笔记：call-superpowers-first、feedback-methodology-over-product、project-arsenal-builder、reference-aihot-and-khazix、remotion-common-mistakes、spark-project-context、user-sunka-profile、spark-project-context</div>
+  </div>
+  <div class="day-group">
+    <div class="day-marker"></div>
+    <div class="day-header">
+      <div class="day-date">2026-05-22</div>
+      <div class="day-label">Day 7 · 5月22日</div>
+    </div>
+    <div class="day-note">第七天：信息聚合 — 调研市面活动平台后自建「AI 线下活动日历」，React 月历 + 9 色主题标签，从数据收集到页面呈现的完整闭环。</div>
+    <div class="project-list">
+      <div class="project-card">
+        <div class="project-title">AI 线下活动日历</div>
+        <div class="project-desc">React 月历视图，9 大主题分类，活动详情弹窗，静态 JSON 数据驱动</div>
+        <div class="project-skills">
+          <span class="mini-tag">React</span>
+          <span class="mini-tag">Vite</span>
+          <span class="mini-tag">CSS</span>
+          <span class="mini-tag">JavaScript</span>
+          <span class="mini-tag">UX设计</span>
+        </div>
+        <ul class="project-highlights">
+          <li>月历多日事件渲染</li>
+          <li>9 色主题标签系统</li>
+          <li>活动详情 Modal</li>
+          <li>市场调研 → 自建决策</li>
         </ul>
       </div>
     </div>

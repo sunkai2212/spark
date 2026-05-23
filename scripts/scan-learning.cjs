@@ -20,6 +20,9 @@ const VENDOR_PATTERNS = [
   /\.gitkeep$/,
   /\.gitattributes$/,
   /LICENSE/,
+  /vite\.config\.\w+$/,       // Vite scaffold
+  /eslint\.config\.\w+$/,     // ESLint scaffold
+  /\.gitignore$/,
 ];
 
 function isVendorFile(filePath) {
@@ -91,6 +94,13 @@ const PROJECT_META = {
     highlights: ["Phase 1 完整 MVP", "PWA 离线可用", "音频录制 + 波形可视化", "8 种情绪 + 7 种酒类追踪"],
     dir: path.join(DESKTOP, "微醺"),
   },
+  ai线下: {
+    title: "AI 线下活动日历",
+    description: "React 月历视图，9 大主题分类，活动详情弹窗，静态 JSON 数据驱动",
+    skills: ["React", "Vite", "CSS", "JavaScript", "UX设计"],
+    highlights: ["月历多日事件渲染", "9 色主题标签系统", "活动详情 Modal", "市场调研 → 自建决策"],
+    dir: path.join(DESKTOP, "ai线下/ai-events"),
+  },
 };
 
 // ===== 工具函数 =====
@@ -117,7 +127,7 @@ function getSourceFiles(dir) {
 /** 获取项目源文件的 mtime 列表（过滤无用文件后） */
 function getProjectTimestamps(dir) {
   const files = getSourceFiles(dir);
-  return files
+  const timestamps = files
     .map(f => {
       try {
         const stat = fs.statSync(f);
@@ -127,6 +137,15 @@ function getProjectTimestamps(dir) {
       } catch { return null; }
     })
     .filter(Boolean);
+
+  // 过滤模板脚手架文件：只保留最近 36h 内的文件簇
+  // 避免 Vite/React 模板文件（scaffold 时间远早于实际开发时间）污染日期
+  if (timestamps.length > 0) {
+    const maxMtime = Math.max(...timestamps.map(t => t.mtime));
+    const cutoff = maxMtime - 36 * 60 * 60 * 1000;
+    return timestamps.filter(t => t.mtime >= cutoff);
+  }
+  return timestamps;
 }
 
 /** 获取 git 提交日期列表 */
@@ -323,6 +342,8 @@ function main() {
     "2026-05-18": "第三天：冲顶 — Remotion 视频编程 + Quartz 数字花园搭建，从代码到底层框架。",
     "2026-05-19": "第四天：沉淀 — 建立学习时间线可视化、踩坑 Quartz 渲染机制、搭建首个 Agent Skill（Arsenal Builder）、neat-freak 全项目知识体系整理。",
     "2026-05-20": "第五天：方向调整 — 从方法论回到产品，启动微醺 PWA 语音日记；同时深入 Claude Code Hooks 底层机制，理解工具链架构。",
+    "2026-05-21": "第六天：巩固与延伸 — 创意站持续打磨（微醺卡片上线）、Claude Code 上下文机制踩坑与恢复；在稳定中建立工作流信心。",
+    "2026-05-22": "第七天：信息聚合 — 调研市面活动平台后自建「AI 线下活动日历」，React 月历 + 9 色主题标签，从数据收集到页面呈现的完整闭环。",
   };
 
   const firstDate = new Date(sortedDays[0]);
