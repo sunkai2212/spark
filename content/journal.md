@@ -1,6 +1,6 @@
 ---
 title: "学习历程"
-description: "Claude Code 学习时间线 · 7 天 10 个项目的成长轨迹"
+description: "Claude Code 学习时间线 · 10 天 12 个项目的成长轨迹"
 created: 2026-05-18
 tags:
   - 学习
@@ -267,17 +267,21 @@ body[data-mode="dark"] .mini-tag:hover {
 
 <!-- TIMELINE_START -->
 <div class="stats-bar">
-  <div class="stat-card"><span class="stat-number">7</span><span class="stat-label">学习天数</span></div>
-  <div class="stat-card"><span class="stat-number">10</span><span class="stat-label">完成项目</span></div>
-  <div class="stat-card"><span class="stat-number">32</span><span class="stat-label">掌握技能</span></div>
+  <div class="stat-card"><span class="stat-number">10</span><span class="stat-label">学习天数</span></div>
+  <div class="stat-card"><span class="stat-number">12</span><span class="stat-label">完成项目</span></div>
+  <div class="stat-card"><span class="stat-number">36</span><span class="stat-label">掌握技能</span></div>
 </div>
 
 <div class="skills-cloud">
   <span class="skill-tag">动画</span>
   <span class="skill-tag">方法论</span>
+  <span class="skill-tag">公众号创作</span>
   <span class="skill-tag">品牌设计</span>
   <span class="skill-tag">设计</span>
   <span class="skill-tag">数据分析</span>
+  <span class="skill-tag">写作方法</span>
+  <span class="skill-tag">心理学</span>
+  <span class="skill-tag">字体排版</span>
   <span class="skill-tag">Agent Skills</span>
   <span class="skill-tag">Axios</span>
   <span class="skill-tag">Canvas</span>
@@ -481,19 +485,6 @@ body[data-mode="dark"] .mini-tag:hover {
           <li>CI/CD 自动部署</li>
         </ul>
       </div>
-      <div class="project-card">
-        <div class="project-title">Arsenal Builder 方法论</div>
-        <div class="project-desc">跨领域知识积累 Agent Skill，移植 aiHot 原则为通用方法论</div>
-        <div class="project-skills">
-          <span class="mini-tag">Agent Skills</span>
-          <span class="mini-tag">Markdown</span>
-          <span class="mini-tag">方法论</span>
-        </div>
-        <ul class="project-highlights">
-          <li>首个自建 Agent Skill</li>
-          <li>SKILL.md + 交接文档 + 记忆体系</li>
-        </ul>
-      </div>
     </div>
     <div class="memory-refs">🧠 经验笔记：feedback-methodology-over-product、project-arsenal-builder、reference-aihot-and-khazix、user-sunka-profile</div>
   </div>
@@ -579,6 +570,114 @@ body[data-mode="dark"] .mini-tag:hover {
         </ul>
       </div>
     </div>
+  </div>
+  <div class="day-group">
+    <div class="day-marker"></div>
+    <div class="day-header">
+      <div class="day-date">2026-05-23</div>
+      <div class="day-label">Day 8 · 5月23日</div>
+    </div>
+    <div class="day-note">第八天：知识基建 — 记忆系统大整合（3→10 条目）、学习时间线持续追踪、扫描器鲁棒性升级；在重复中建立可迁移的工作流。</div>
+    <div class="project-list">
+      <div class="project-card">
+        <div class="project-title">火花 · 创意数字花园</div>
+        <div class="project-desc">Quartz v4.5.2 个人知识库，Apple 风格主题</div>
+        <div class="project-skills">
+          <span class="mini-tag">Quartz</span>
+          <span class="mini-tag">TypeScript</span>
+          <span class="mini-tag">SCSS</span>
+          <span class="mini-tag">GitHub Pages</span>
+          <span class="mini-tag">设计</span>
+        </div>
+        <ul class="project-highlights">
+          <li>个人创意站从零搭建</li>
+          <li>Apple 风格 UI 定制</li>
+          <li>CI/CD 自动部署</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Arsenal Builder 方法论</div>
+        <div class="project-desc">跨领域知识积累 Agent Skill，移植 aiHot 原则为通用方法论</div>
+        <div class="project-skills">
+          <span class="mini-tag">Agent Skills</span>
+          <span class="mini-tag">Markdown</span>
+          <span class="mini-tag">方法论</span>
+        </div>
+        <ul class="project-highlights">
+          <li>首个自建 Agent Skill</li>
+          <li>SKILL.md + 交接文档 + 记忆体系</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="day-group">
+    <div class="day-marker"></div>
+    <div class="day-header">
+      <div class="day-date">2026-05-24</div>
+      <div class="day-label">Day 9 · 5月24日</div>
+    </div>
+    <div class="day-note">第九天：写作系统 — 研读卡兹克写作 Skill，梳理个人底色（敏感的记录者），创建 sunka-writer：HKR 选题框架 × 蓝调时刻美学，确立「不做人设做作品」。</div>
+    <div class="project-list">
+      <div class="project-card">
+        <div class="project-title">孙卡写作系统 · sunka-writer</div>
+        <div class="project-desc">心理/情绪类深度内容 Agent Skill，HKR 选题质检，蓝调时刻美学</div>
+        <div class="project-skills">
+          <span class="mini-tag">Agent Skills</span>
+          <span class="mini-tag">写作方法</span>
+          <span class="mini-tag">心理学</span>
+          <span class="mini-tag">公众号创作</span>
+        </div>
+        <ul class="project-highlights">
+          <li>首个个人写作 Skill</li>
+          <li>HKR 选题框架</li>
+          <li>核心身份定义</li>
+          <li>众生蒙太奇概念</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="day-group">
+    <div class="day-marker"></div>
+    <div class="day-header">
+      <div class="day-date">2026-05-25</div>
+      <div class="day-label">Day 10 · 5月25日</div>
+    </div>
+    <div class="day-note">第十天：作品产出 —「众生蒙太奇」全文定稿（城市陌生人 × 电影蒙太奇隐喻）、配字工具 Sharp SVG 封面生成、Midjourney 提示词工程。写作与工具的首次交汇。</div>
+    <div class="project-list">
+      <div class="project-card">
+        <div class="project-title">孙卡写作系统 · sunka-writer</div>
+        <div class="project-desc">心理/情绪类深度内容 Agent Skill，HKR 选题质检，蓝调时刻美学</div>
+        <div class="project-skills">
+          <span class="mini-tag">Agent Skills</span>
+          <span class="mini-tag">写作方法</span>
+          <span class="mini-tag">心理学</span>
+          <span class="mini-tag">公众号创作</span>
+        </div>
+        <ul class="project-highlights">
+          <li>首个个人写作 Skill</li>
+          <li>HKR 选题框架</li>
+          <li>核心身份定义</li>
+          <li>众生蒙太奇概念</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <div class="project-title">配字 · 封面标题生成</div>
+        <div class="project-desc">Sharp 图片文字叠加工具，斜体抗锯齿、自适应字号、电影感封面</div>
+        <div class="project-skills">
+          <span class="mini-tag">Node.js</span>
+          <span class="mini-tag">Sharp</span>
+          <span class="mini-tag">SVG</span>
+          <span class="mini-tag">字体排版</span>
+        </div>
+        <ul class="project-highlights">
+          <li>超粗黑体 + 斜体倾斜</li>
+          <li>自适应字号计算</li>
+          <li>电影感冷色调封面</li>
+          <li>Sharp SVG 复合渲染</li>
+        </ul>
+      </div>
+    </div>
+    <div class="memory-refs">🧠 经验笔记：public-account-project、sunka-content-preferences</div>
   </div>
 </div>
 <!-- TIMELINE_END -->

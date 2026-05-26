@@ -101,6 +101,20 @@ const PROJECT_META = {
     highlights: ["月历多日事件渲染", "9 色主题标签系统", "活动详情 Modal", "市场调研 → 自建决策"],
     dir: path.join(DESKTOP, "ai线下/ai-events"),
   },
+  sunkaWriter: {
+    title: "孙卡写作系统 · sunka-writer",
+    description: "心理/情绪类深度内容 Agent Skill，HKR 选题质检，蓝调时刻美学",
+    skills: ["Agent Skills", "写作方法", "心理学", "公众号创作"],
+    highlights: ["首个个人写作 Skill", "HKR 选题框架", "核心身份定义", "众生蒙太奇概念"],
+    dir: path.join(DESKTOP, "公众号"),
+  },
+  配字: {
+    title: "配字 · 封面标题生成",
+    description: "Sharp 图片文字叠加工具，斜体抗锯齿、自适应字号、电影感封面",
+    skills: ["Node.js", "Sharp", "SVG", "字体排版"],
+    highlights: ["超粗黑体 + 斜体倾斜", "自适应字号计算", "电影感冷色调封面", "Sharp SVG 复合渲染"],
+    dir: path.join(DESKTOP, "配字"),
+  },
 };
 
 // ===== 工具函数 =====
@@ -344,6 +358,9 @@ function main() {
     "2026-05-20": "第五天：方向调整 — 从方法论回到产品，启动微醺 PWA 语音日记；同时深入 Claude Code Hooks 底层机制，理解工具链架构。",
     "2026-05-21": "第六天：巩固与延伸 — 创意站持续打磨（微醺卡片上线）、Claude Code 上下文机制踩坑与恢复；在稳定中建立工作流信心。",
     "2026-05-22": "第七天：信息聚合 — 调研市面活动平台后自建「AI 线下活动日历」，React 月历 + 9 色主题标签，从数据收集到页面呈现的完整闭环。",
+    "2026-05-23": "第八天：知识基建 — 记忆系统大整合（3→10 条目）、学习时间线持续追踪、扫描器鲁棒性升级；在重复中建立可迁移的工作流。",
+    "2026-05-24": "第九天：写作系统 — 研读卡兹克写作 Skill，梳理个人底色（敏感的记录者），创建 sunka-writer：HKR 选题框架 × 蓝调时刻美学，确立「不做人设做作品」。",
+    "2026-05-25": "第十天：作品产出 —「众生蒙太奇」全文定稿（城市陌生人 × 电影蒙太奇隐喻）、配字工具 Sharp SVG 封面生成、Midjourney 提示词工程。写作与工具的首次交汇。",
   };
 
   const firstDate = new Date(sortedDays[0]);
