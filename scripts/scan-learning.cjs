@@ -100,6 +100,7 @@ const PROJECT_META = {
     skills: ["React", "Vite", "CSS", "JavaScript", "UX设计"],
     highlights: ["月历多日事件渲染", "9 色主题标签系统", "活动详情 Modal", "市场调研 → 自建决策"],
     dir: path.join(DESKTOP, "ai线下/ai-events"),
+    minDate: "2026-05-22",
   },
   sunkaWriter: {
     title: "孙卡写作系统 · sunka-writer",
@@ -114,6 +115,13 @@ const PROJECT_META = {
     skills: ["Node.js", "Sharp", "SVG", "字体排版"],
     highlights: ["超粗黑体 + 斜体倾斜", "自适应字号计算", "电影感冷色调封面", "Sharp SVG 复合渲染"],
     dir: path.join(DESKTOP, "配字"),
+  },
+  想法交易平台: {
+    title: "想法交易平台 · 头脑风暴",
+    description: "创意市集概念：虚拟币×阶段投资×线下足迹，好玩版 GitHub",
+    skills: ["产品设计", "游戏化", "交易系统", "社区运营"],
+    highlights: ["B 路线确立：社交游戏化", "阶段投资回报机制", "线下活动足迹打卡", "AI 评审构想", "不以盈利为起点"],
+    dir: path.join(DESKTOP, "想法交易平台"),
   },
 };
 
@@ -139,7 +147,7 @@ function getSourceFiles(dir) {
 }
 
 /** 获取项目源文件的 mtime 列表（过滤无用文件后） */
-function getProjectTimestamps(dir) {
+function getProjectTimestamps(dir, minDate) {
   const files = getSourceFiles(dir);
   const timestamps = files
     .map(f => {
@@ -152,11 +160,8 @@ function getProjectTimestamps(dir) {
     })
     .filter(Boolean);
 
-  // 过滤模板脚手架文件：只保留最近 36h 内的文件簇
-  // 避免 Vite/React 模板文件（scaffold 时间远早于实际开发时间）污染日期
-  if (timestamps.length > 0) {
-    const maxMtime = Math.max(...timestamps.map(t => t.mtime));
-    const cutoff = maxMtime - 36 * 60 * 60 * 1000;
+  if (minDate) {
+    const cutoff = new Date(minDate).getTime();
     return timestamps.filter(t => t.mtime >= cutoff);
   }
   return timestamps;
@@ -321,7 +326,7 @@ function main() {
       }
     } else {
       // 无 git → 用源文件 mtime
-      const files = getProjectTimestamps(meta.dir);
+      const files = getProjectTimestamps(meta.dir, meta.minDate);
       for (const f of files) {
         allDates.push({ project: name, date: new Date(f.mtime), mtimeMs: f.mtime });
       }
@@ -361,6 +366,8 @@ function main() {
     "2026-05-23": "第八天：知识基建 — 记忆系统大整合（3→10 条目）、学习时间线持续追踪、扫描器鲁棒性升级；在重复中建立可迁移的工作流。",
     "2026-05-24": "第九天：写作系统 — 研读卡兹克写作 Skill，梳理个人底色（敏感的记录者），创建 sunka-writer：HKR 选题框架 × 蓝调时刻美学，确立「不做人设做作品」。",
     "2026-05-25": "第十天：作品产出 —「众生蒙太奇」全文定稿（城市陌生人 × 电影蒙太奇隐喻）、配字工具 Sharp SVG 封面生成、Midjourney 提示词工程。写作与工具的首次交汇。",
+    "2026-05-26": "第十一天：内容裂变 —「众生蒙太奇」抖音文字旁白版改编；深度头脑风暴「想法交易平台」（虚拟币×阶段投资×线下足迹），确立 B 路线：社交游戏化。",
+    "2026-05-27": "第十二天：持续追踪 — 学习时间线同步至 Day 12，项目记录维护。",
   };
 
   const firstDate = new Date(sortedDays[0]);

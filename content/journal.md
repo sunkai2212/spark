@@ -1,6 +1,6 @@
 ---
 title: "学习历程"
-description: "Claude Code 学习时间线 · 10 天 12 个项目的成长轨迹"
+description: "Claude Code 学习时间线 · 12 天 12 个项目的成长轨迹"
 created: 2026-05-18
 tags:
   - 学习
@@ -267,7 +267,7 @@ body[data-mode="dark"] .mini-tag:hover {
 
 <!-- TIMELINE_START -->
 <div class="stats-bar">
-  <div class="stat-card"><span class="stat-number">10</span><span class="stat-label">学习天数</span></div>
+  <div class="stat-card"><span class="stat-number">12</span><span class="stat-label">学习天数</span></div>
   <div class="stat-card"><span class="stat-number">12</span><span class="stat-label">完成项目</span></div>
   <div class="stat-card"><span class="stat-number">36</span><span class="stat-label">掌握技能</span></div>
 </div>
@@ -485,6 +485,19 @@ body[data-mode="dark"] .mini-tag:hover {
           <li>CI/CD 自动部署</li>
         </ul>
       </div>
+      <div class="project-card">
+        <div class="project-title">Arsenal Builder 方法论</div>
+        <div class="project-desc">跨领域知识积累 Agent Skill，移植 aiHot 原则为通用方法论</div>
+        <div class="project-skills">
+          <span class="mini-tag">Agent Skills</span>
+          <span class="mini-tag">Markdown</span>
+          <span class="mini-tag">方法论</span>
+        </div>
+        <ul class="project-highlights">
+          <li>首个自建 Agent Skill</li>
+          <li>SKILL.md + 交接文档 + 记忆体系</li>
+        </ul>
+      </div>
     </div>
     <div class="memory-refs">🧠 经验笔记：feedback-methodology-over-product、project-arsenal-builder、reference-aihot-and-khazix、user-sunka-profile</div>
   </div>
@@ -678,6 +691,74 @@ body[data-mode="dark"] .mini-tag:hover {
       </div>
     </div>
     <div class="memory-refs">🧠 经验笔记：public-account-project、sunka-content-preferences</div>
+  </div>
+  <div class="day-group">
+    <div class="day-marker"></div>
+    <div class="day-header">
+      <div class="day-date">2026-05-26</div>
+      <div class="day-label">Day 11 · 5月26日</div>
+    </div>
+    <div class="day-note">第十一天：内容裂变 —「众生蒙太奇」抖音文字旁白版改编；深度头脑风暴「想法交易平台」（虚拟币×阶段投资×线下足迹），确立 B 路线：社交游戏化。</div>
+    <div class="project-list">
+      <div class="project-card">
+        <div class="project-title">火花 · 创意数字花园</div>
+        <div class="project-desc">Quartz v4.5.2 个人知识库，Apple 风格主题</div>
+        <div class="project-skills">
+          <span class="mini-tag">Quartz</span>
+          <span class="mini-tag">TypeScript</span>
+          <span class="mini-tag">SCSS</span>
+          <span class="mini-tag">GitHub Pages</span>
+          <span class="mini-tag">设计</span>
+        </div>
+        <ul class="project-highlights">
+          <li>个人创意站从零搭建</li>
+          <li>Apple 风格 UI 定制</li>
+          <li>CI/CD 自动部署</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <div class="project-title">孙卡写作系统 · sunka-writer</div>
+        <div class="project-desc">心理/情绪类深度内容 Agent Skill，HKR 选题质检，蓝调时刻美学</div>
+        <div class="project-skills">
+          <span class="mini-tag">Agent Skills</span>
+          <span class="mini-tag">写作方法</span>
+          <span class="mini-tag">心理学</span>
+          <span class="mini-tag">公众号创作</span>
+        </div>
+        <ul class="project-highlights">
+          <li>首个个人写作 Skill</li>
+          <li>HKR 选题框架</li>
+          <li>核心身份定义</li>
+          <li>众生蒙太奇概念</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="day-group">
+    <div class="day-marker"></div>
+    <div class="day-header">
+      <div class="day-date">2026-05-27</div>
+      <div class="day-label">Day 12 · 5月27日</div>
+    </div>
+    <div class="day-note">第十二天：持续追踪 — 学习时间线同步至 Day 12，项目记录维护。</div>
+    <div class="project-list">
+      <div class="project-card">
+        <div class="project-title">Remotion 游戏 PV 动效</div>
+        <div class="project-desc">React 驱动的视频渲染引擎，5 场景动画</div>
+        <div class="project-skills">
+          <span class="mini-tag">React</span>
+          <span class="mini-tag">Remotion</span>
+          <span class="mini-tag">TypeScript</span>
+          <span class="mini-tag">Canvas</span>
+          <span class="mini-tag">动画</span>
+        </div>
+        <ul class="project-highlights">
+          <li>视频编程入门</li>
+          <li>组件化动画系统</li>
+          <li>踩坑：深色背景渲染</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 <!-- TIMELINE_END -->
